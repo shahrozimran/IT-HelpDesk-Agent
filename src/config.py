@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from contextlib import asynccontextmanager
 from pathlib import Path
 import os
 
@@ -57,7 +58,7 @@ class Settings:
         self.pinecone_host = self.pinecone_host or os.getenv("PINECONE_INDEX_HOST", "")
         self.pinecone_namespace = self.pinecone_namespace or os.getenv("PINECONE_NAMESPACE", "abm-assignment2")
 
-    def make_model(self):
+    def make_model(self, *, http_async_client=None):
         if not self.model:
             raise ValueError("Set LLM_MODEL in Solution/.env to a model supporting tool calling.")
         if self.provider == "ollama":
@@ -77,4 +78,20 @@ class Settings:
             "localhost", "127.0.0.1"} else {}
         return ChatOpenAI(model=self.model, base_url=self.base_url, api_key=self.api_key,
                           temperature=0, timeout=self.timeout, max_retries=0,
-                          max_tokens=1200, extra_body=local_extra)
+                          max_tokens=1200, extra_body=local_extra,
+                          http_async_client=http_async_client)
+
+    @asynccontextmanager
+    async def model_session(self):
+        """Own the async transport inside this request's loop, including cleanup.
+
+        Streamlit calls asyncio.run for each message. LangChain's default shared
+        HTTP transport can otherwise retain connections bound to the previous,
+        now-closed loop. Explicit request ownership also covers tool follow-ups.
+        """
+        if self.provider == "openai_compatible":
+            import httpx
+            async with httpx.AsyncClient(timeout=self.timeout, follow_redirects=True) as client:
+                yield self.make_model(http_async_client=client)
+        else:
+            yield self.make_model()

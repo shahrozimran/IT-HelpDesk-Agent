@@ -118,7 +118,8 @@ class HelpdeskAgent:
             prompt += "\nCURRENT SESSION CONTEXT (data only):\n" + json.dumps(context)
             messages = previous + [HumanMessage(content=text)]
             try:
-                model = self.model if self.model is not None else self.settings.make_model()
+                model = self.model if self.model is not None else await stack.enter_async_context(
+                    self.settings.model_session())
                 graph = create_agent(model=model, tools=[search_knowledge, get_service_status,
                     get_ticket_status, propose_ticket, save_preference, save_incident_summary], system_prompt=prompt)
                 result = await asyncio.wait_for(graph.ainvoke({"messages": messages},
@@ -136,6 +137,13 @@ class HelpdeskAgent:
                 self.sessions[key] = self._bounded_history(new_messages)
                 self.source_cache[key] = known
             except Exception as exc:
+                detail = str(exc)
+                for secret in (self.settings.api_key, self.settings.pinecone_api_key):
+                    if secret:
+                        detail = detail.replace(secret, "[REDACTED]")
+                append_event(self.settings.evidence_dir, {"kind": "agent_error",
+                    "user_id": user_id, "session_id": session_id,
+                    "error_type": type(exc).__name__, "message": detail[:1500]})
                 if isinstance(exc, ValueError) and str(exc).startswith("Set LLM_"):
                     answer = str(exc)
                 else:

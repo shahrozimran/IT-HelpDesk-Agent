@@ -1,0 +1,7 @@
+{
+  "state": "prepared_local_only",
+  "documents": 5,
+  "prepared_chunks": 20,
+  "store": "Pinecone",
+  "uploaded": false
+}

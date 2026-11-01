@@ -1,0 +1,24 @@
+.env
+.env.*
+!.env.example
+.venv/
+.cache/
+__pycache__/
+.pytest_cache/
+*.pyc
+tmp/
+data/*.sqlite3*
+evidence/transcripts/
+evidence/tool_calls.jsonl
+evidence/installation.log
+evidence/live_demo/
+evidence/history/
+.streamlit/secrets.toml
+output/
+
+# Publish only curated verification summaries, never runtime logs or transcripts.
+evidence/*
+!evidence/verification.md
+!evidence/test_results.txt
+!evidence/preparation.json
+!evidence/ingestion.json

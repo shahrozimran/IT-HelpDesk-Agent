@@ -1,0 +1,9 @@
+{
+  "documents": 5,
+  "uploaded_chunks": 20,
+  "embedding_model": "all-MiniLM-L6-v2-onnx-384",
+  "dimensions": 384,
+  "store": "Pinecone",
+  "namespace": "abm-assignment2-9e055637723f",
+  "note": "Upserts acknowledged; query visibility is eventually consistent."
+}

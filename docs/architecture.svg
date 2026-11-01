@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="840" viewBox="0 0 1360 840">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#648194"/></marker></defs>
+<rect width="1360" height="840" fill="#f5f7fb"/>
+<text x="30" y="30" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#10263b">Campus Helpdesk · Scenario 23</text>
+<path d="M340 110H420V260H500" fill="none" stroke="#648194" stroke-width="2.5" marker-end="url(#arrow)"/>
+<path d="M655 160V235" fill="none" stroke="#648194" stroke-width="2.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M980 110H900V260H810" fill="none" stroke="#648194" stroke-width="2.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M340 285H500" fill="none" stroke="#648194" stroke-width="2.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M340 470H420V315H500" fill="none" stroke="#648194" stroke-width="2.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M810 285H980" fill="none" stroke="#648194" stroke-width="2.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M1135 335V420" fill="none" stroke="#648194" stroke-width="2.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M655 335V420" fill="none" stroke="#648194" stroke-width="2.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M655 520V615" fill="none" stroke="#648194" stroke-width="2.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M810 665H980" fill="none" stroke="#648194" stroke-width="2.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M500 310H385V665H340" fill="none" stroke="#648194" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="676" y="572" font-family="Arial,sans-serif" font-size="18" fill="#087e8b">stdio protocol</text>
+<rect x="30" y="60" width="310" height="100" rx="12" fill="white" stroke="#cfdae4"/>
+<text x="46" y="87" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#10263b">SYSTEM PROMPT</text>
+<text x="46" y="114" font-family="Arial,sans-serif" font-size="15" fill="#486277">Role · evidence · memory</text>
+<text x="46" y="137" font-family="Arial,sans-serif" font-size="15" fill="#486277">tool rules · uncertainty</text>
+<rect x="500" y="60" width="310" height="100" rx="12" fill="white" stroke="#cfdae4"/>
+<text x="516" y="87" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#10263b">USER INTERFACE</text>
+<text x="516" y="114" font-family="Arial,sans-serif" font-size="15" fill="#486277">Local chat UI or CLI</text>
+<text x="516" y="137" font-family="Arial,sans-serif" font-size="15" fill="#486277">Explicit ticket confirmation</text>
+<rect x="980" y="60" width="310" height="100" rx="12" fill="white" stroke="#cfdae4"/>
+<text x="996" y="87" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#10263b">CONFIGURED LLM</text>
+<text x="996" y="114" font-family="Arial,sans-serif" font-size="15" fill="#486277">Interprets the request</text>
+<text x="996" y="137" font-family="Arial,sans-serif" font-size="15" fill="#486277">Selects tools and writes reply</text>
+<rect x="30" y="235" width="310" height="100" rx="12" fill="white" stroke="#cfdae4"/>
+<text x="46" y="262" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#10263b">SHORT-TERM MEMORY</text>
+<text x="46" y="289" font-family="Arial,sans-serif" font-size="15" fill="#486277">Recent conversation messages</text>
+<text x="46" y="312" font-family="Arial,sans-serif" font-size="15" fill="#486277">Scoped by user + session</text>
+<rect x="500" y="235" width="310" height="100" rx="12" fill="#087e8b" stroke="#cfdae4"/>
+<text x="516" y="262" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="white">ONE PYTHON AI AGENT</text>
+<text x="516" y="289" font-family="Arial,sans-serif" font-size="15" fill="#e8ffff">LangChain tool-calling loop</text>
+<text x="516" y="312" font-family="Arial,sans-serif" font-size="15" fill="#e8ffff">Grounded reply + citations</text>
+<rect x="980" y="235" width="310" height="100" rx="12" fill="white" stroke="#cfdae4"/>
+<text x="996" y="262" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#10263b">RAG RETRIEVAL TOOL</text>
+<text x="996" y="289" font-family="Arial,sans-serif" font-size="15" fill="#486277">Semantic document search</text>
+<text x="996" y="312" font-family="Arial,sans-serif" font-size="15" fill="#486277">Source IDs + passages</text>
+<rect x="30" y="420" width="310" height="100" rx="12" fill="white" stroke="#cfdae4"/>
+<text x="46" y="447" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#10263b">LONG-TERM MEMORY</text>
+<text x="46" y="474" font-family="Arial,sans-serif" font-size="15" fill="#486277">SQLite preferences + incidents</text>
+<text x="46" y="497" font-family="Arial,sans-serif" font-size="15" fill="#486277">Retrieved in a new session</text>
+<rect x="500" y="420" width="310" height="100" rx="12" fill="white" stroke="#cfdae4"/>
+<text x="516" y="447" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#10263b">PYTHON MCP CLIENT</text>
+<text x="516" y="474" font-family="Arial,sans-serif" font-size="15" fill="#486277">Initializes + discovers tools</text>
+<text x="516" y="497" font-family="Arial,sans-serif" font-size="15" fill="#486277">Invokes real tool calls</text>
+<rect x="980" y="420" width="310" height="100" rx="12" fill="white" stroke="#cfdae4"/>
+<text x="996" y="447" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#10263b">PINECONE (REMOTE)</text>
+<text x="996" y="474" font-family="Arial,sans-serif" font-size="15" fill="#486277">384-dimensional cosine vectors</text>
+<text x="996" y="497" font-family="Arial,sans-serif" font-size="15" fill="#486277">Local MiniLM embeddings + metadata</text>
+<rect x="30" y="615" width="310" height="100" rx="12" fill="white" stroke="#cfdae4"/>
+<text x="46" y="642" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#10263b">EXECUTION EVIDENCE</text>
+<text x="46" y="669" font-family="Arial,sans-serif" font-size="15" fill="#486277">Tool requests and real results</text>
+<text x="46" y="692" font-family="Arial,sans-serif" font-size="15" fill="#486277">Transcripts + test outcomes</text>
+<rect x="500" y="615" width="310" height="100" rx="12" fill="white" stroke="#cfdae4"/>
+<text x="516" y="642" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#10263b">SEPARATE MCP SERVER</text>
+<text x="516" y="669" font-family="Arial,sans-serif" font-size="15" fill="#486277">Official SDK / FastMCP</text>
+<text x="516" y="692" font-family="Arial,sans-serif" font-size="15" fill="#486277">Services + confirmed tickets</text>
+<rect x="980" y="615" width="310" height="100" rx="12" fill="white" stroke="#cfdae4"/>
+<text x="996" y="642" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#10263b">SIMULATED SERVICE STATE</text>
+<text x="996" y="669" font-family="Arial,sans-serif" font-size="15" fill="#486277">SQLite service status + tickets</text>
+<text x="996" y="692" font-family="Arial,sans-serif" font-size="15" fill="#486277">Approval and duplicate checks</text>
+<text x="30" y="778" font-family="Arial,sans-serif" font-size="17" fill="#486277">All campus policies, services and tickets are synthetic educational data.</text>
+<text x="30" y="807" font-family="Arial,sans-serif" font-size="15" fill="#648194">One primary AI agent. RAG knowledge and persistent user memory have distinct purposes.</text>
+</svg>

@@ -1,0 +1,7 @@
+[
+  {"id":"WIFI","title":"Campus Wi-Fi troubleshooting","path":"data/knowledge/wifi.md","origin":"Student project synthetic resource; not an official UCP policy","version":"2026-11-01","synthetic":true},
+  {"id":"VPN","title":"Remote-access VPN guide","path":"data/knowledge/vpn.md","origin":"Student project synthetic resource; not an official UCP policy","version":"2026-11-01","synthetic":true},
+  {"id":"ACCOUNTS","title":"Account access and password recovery","path":"data/knowledge/accounts.md","origin":"Student project synthetic resource; not an official UCP policy","version":"2026-11-01","synthetic":true},
+  {"id":"PRINT","title":"Printing and queue troubleshooting","path":"data/knowledge/printing.md","origin":"Student project synthetic resource; not an official UCP policy","version":"2026-11-01","synthetic":true},
+  {"id":"POLICY","title":"Helpdesk escalation and service priorities","path":"data/knowledge/escalation.md","origin":"Student project synthetic resource; not an official UCP policy","version":"2026-11-01","synthetic":true}
+]

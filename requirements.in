@@ -1,0 +1,12 @@
+langchain>=1,<2
+langchain-openai>=1,<2
+langchain-ollama>=1,<2
+mcp>=1.20,<2
+pinecone>=10,<11
+onnxruntime>=1.20,<2
+tokenizers>=0.20,<1
+numpy>=2,<3
+streamlit>=1.50,<2
+pytest>=8,<10
+python-dotenv>=1,<2
+httpx>=0.28,<1
